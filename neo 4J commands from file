@@ -1,17 +1,1 @@
-CREATE (:Person {name: "John"}) 
-
-MATCH (p:Person {name: "John"}) RETURN p  
-
-CREATE (:Person {name: "John"}), 
-(:Person {name: "Jane"}), 
-(:Product {productName: "Laptop"}),  
-(:Place {location: "New York"})  
-
-CREATE (:Person {name: "John"}) 
-
-CREATE (:Book {title: "The Great Gatsby"}) 
-
-MATCH (person:Person {name: "John"}) 
-MATCH (book:Book {title: "The Great Gatsby"})  
-CREATE (person)-[:READS]->(book)  
 

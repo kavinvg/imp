@@ -1,0 +1,48 @@
+For Windows:
+
+1.Download MongoDB:
+
+Go to the MongoDB Download Center.
+Select the appropriate version for Windows.
+
+2.Install MongoDB:
+
+Run the downloaded .msi installer.
+Select "Complete" during installation.
+Choose to install MongoDB as a service (recommended).
+Make sure to include MongoDB Compass if you want a GUI for managing your databases.
+
+3.Set the System Path:
+
+Add the MongoDB bin folder to your system's PATH environment variable.
+Navigate to the installation directory (e.g., C:\Program Files\MongoDB\Server\<version>\bin) and copy the path.
+Right-click on This PC > Properties > Advanced system settings > Environment Variables.
+Under System variables, find Path, click Edit, and add MongoDB's bin directory.
+
+4.Create Data and Log Directories:
+
+MongoDB needs directories for data and logs.
+Open a terminal (cmd or PowerShell) and create the following directories:
+
+Copy code
+mkdir C:\data\db
+mkdir C:\data\log
+
+5.Start MongoDB:
+
+You can start MongoDB as a service (if you chose that during installation) or manually by running the following in the terminal:
+bash
+
+Copy code
+mongod
+
+The database will start running in the background.
+
+6.Verify Installation:
+
+Open a new terminal and type:
+
+Copy code
+mongo
+
+This should launch the MongoDB shell, confirming the installation.

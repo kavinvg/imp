@@ -1,0 +1,37 @@
+//experiment 5 Neo 4J , you have to run all these queries directly in the app 
+
+//Step 1: Open Neo4j Browser
+
+//Step 2: Create Nodes
+
+CREATE (p:Person {name: 'Alice', age: 30});
+CREATE (c:City {name: 'New York'});
+
+//Step 3: View the Created Nodes
+
+MATCH (p:Person) RETURN p;
+MATCH (c:City) RETURN c;
+
+//Step 4: Create Relationship
+
+MATCH (p:Person {name: 'Alice'}), (c:City {name: 'New York'})
+CREATE (p)-[:LIVES_IN]->(c);
+
+
+//Step 5: View the Relationship
+
+MATCH (p:Person)-[r:LIVES_IN]->(c:City)
+RETURN p, r, c;
+
+
+//Step 6: Clean Up (Delete Relationship and Nodes)
+//1.Delete the relationship:
+
+MATCH (p:Person)-[r:LIVES_IN]->(c:City)
+DELETE r;
+
+//2.Delete the nodes:
+
+MATCH (p:Person), (c:City)
+DELETE p, c;
+

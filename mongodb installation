@@ -1,0 +1,35 @@
+ download current version from mongo db website
+
+ click next next next and install
+
+ this PC - C DRIVE- PROGRAM FILE
+
+ mongo db- server-8.0- bin
+
+ Window - edit environmental - environmental variables - path - new - paste path in second box , and then click ok
+
+ click on bin and copy path , then click windows and go to environment - environment
+
+ Chrome , new window - mongo db shell , go to first website - package (mi) , download,Next next next nd finish
+
+ Windows+ D
+
+ Mongo db on screen and do next next and finish
+
+ Then open command prompt and type
+
+ mongod   - - version
+
+ Open new command prompt
+
+ Type Mongosh
+
+ Type show dbs
+
+ db.createCollection("Students")
+
+ use Kavin
+
+ db.createCollection(“employee”)
+
+ Show dbs

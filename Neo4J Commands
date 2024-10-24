@@ -1,3 +1,10 @@
+if its not installed 
+Neo4j Installation: 
+Download and install Neo4j from the official website: Neo4j Download. 
+Start Neo4j: Start the Neo4j database server and access the Neo4j Browser, typically available  at 
+http://localhost:7474/ . 
+
+
 //experiment 5 Neo 4J , you have to run all these queries directly in the app 
 
 //Step 1: Open Neo4j Browser

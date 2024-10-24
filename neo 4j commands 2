@@ -1,0 +1,22 @@
+//u can run these as well
+
+Create(:Person{name:"Kavin"})
+
+Create(:Person{name:"Uska Frnd"})
+
+match(x:Person{name:"Uska Frnd"}) return x
+
+match(p:Person{name:"Kavin"}) return p
+
+Match(k:Person{name:"Kavin"})
+Match(f:Person{name:"Uska Frnd"})
+Create(k)-[:frnds]->(f)
+
+Match(k)-[:frnds]->(f) return k,f
+
+MERGE (k:Person {name:"Kavin"})
+MERGE (f:Person {name:"Uska Frnd"})
+MERGE (k)-[:frnds]->(f)
+
+MATCH (k:Person {name:"Kavin"})-[r:frnds]->(f:Person {name:"Uska Frnd"})
+RETURN k, r, f

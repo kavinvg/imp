@@ -1,0 +1,49 @@
+Data Visualization Using R
+1.Overview of R:
+
+R is a programming language designed for statistical analysis and data visualization. It has many libraries that help create various types of visualizations.
+Key Steps for Data Visualization:
+Data Import: Use functions like read.csv() to load data. For example:
+r
+Copy code
+data <- read.csv("path/to/your/data.csv")
+
+Data Preparation: Clean and transform data using packages like dplyr and tidyr.
+
+2. Visualization Packages:
+Base R Graphics: Simple plots with built-in functions.
+ggplot2: A popular package for creating complex visualizations.
+r
+Copy code
+library(ggplot2)
+ggplot(data, aes(x = var1, y = var2)) + geom_point()
+
+3.Types of Visualizations:
+Scatter Plots: Show relationships between two variables.
+Bar Charts: Compare different categories.
+Histograms: Display the distribution of data.
+Boxplots: Visualize data spread and identify outliers.
+Heatmaps: Show data density in matrix form.
+Interactive Visualizations: Use packages like plotly for dynamic graphs.
+
+Practical Example: California Housing Data
+
+Install and Load Packages: Install and load necessary libraries:
+r
+Copy code
+install.packages("ggplot2")
+library(ggplot2)
+Import Data: Load the California housing dataset:
+r
+Copy code
+data <- read.csv("path/to/california_housing_train.csv")
+head(data)
+Create a Scatter Plot: Visualize the relationship between median income and median house value:
+r
+Copy code
+ggplot(data, aes(x = median_income, y = median_house_value)) +
+  geom_point() +
+  labs(title = "Median Income vs Median House Value", x = "Median Income", y = "Median House Value")
+
+Conclusion
+This experiment highlights how to use R for data visualization, allowing for the easy identification of trends and insights in data. Combining R's visualization capabilities with HIVE can enhance the analysis of large datasets.

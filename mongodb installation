@@ -33,3 +33,82 @@
  db.createCollection(“employee”)
 
  Show dbs
+
+
+What is MongoDB?
+MongoDB is a NoSQL, document-oriented database designed for flexibility and scalability. Unlike traditional relational databases that use tables and rows, MongoDB uses collections and documents. Each document is a JSON-like structure, making MongoDB highly flexible in terms of schema design. It is well-suited for handling large volumes of unstructured or semi-structured data, and its distributed architecture allows it to scale horizontally across many servers.
+
+Key features of MongoDB:
+
+NoSQL Database: MongoDB is schema-less, allowing dynamic changes to data models.
+Scalability: It can handle large volumes of data with features like sharding and replication.
+Document-Oriented: Data is stored in BSON format (Binary JSON), making it easy to map to objects in code.
+High Performance: Optimized for read and write throughput, making it suitable for high-demand applications.
+Let me know if you need more details!
+
+
+
+Basic NoSQL Commands in MongoDB with Example Output:
+1.Show Databases:
+
+show dbs
+Output:
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+
+2.Create or Switch to a Database:
+
+use myDatabase
+Output:
+switched to db myDatabase
+
+3.Create a Collection:
+
+db.createCollection("users")
+Output:
+{ "ok" : 1 }
+
+4.Insert a Document into a Collection:
+
+db.users.insert({name: "John", age: 30})
+Output:
+WriteResult({ "nInserted" : 1 })
+
+5.Find Documents in a Collection:
+
+db.users.find()
+Output:
+{ "_id" : ObjectId("..."), "name" : "John", "age" : 30 }
+
+6.Update a Document:
+db.users.update({name: "John"}, {$set: {age: 31}})
+Output:
+WriteResult({ "nMatched" : 1, "nModified" : 1 })
+
+7.Delete a Document:
+db.users.remove({name: "John"})
+Output:
+WriteResult({ "nRemoved" : 1 })
+
+
+Steps for Installing MongoDB on Windows:
+Download MongoDB: Visit the MongoDB Download Page and download the Community Server version for Windows.
+Run the Installer:
+Open the downloaded .msi file.
+Follow the setup instructions, ensuring you select “Complete” installation.
+MongoDB as a Service:
+Select “Run MongoDB as a Service” so that MongoDB starts automatically when the system boots up.
+Install MongoDB Compass (Optional):
+MongoDB Compass is a GUI tool to interact with MongoDB. You can choose to install this during the setup or skip it.
+Set up the MongoDB Environment:
+MongoDB stores data in the C:\Program Files\MongoDB\Server\{version}\data folder by default.
+Start MongoDB:
+By default, MongoDB runs as a Windows service.
+To start MongoDB manually, open a command prompt and run:
+bash
+Copy code
+mongod
+MongoDB Shell:
+Open a new command prompt, type mongo, and press enter to start the MongoDB shell.
+
